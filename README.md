@@ -84,7 +84,7 @@ For first-time deployment this does not matter; the extension runs during VM cre
 RDP is not opened to the entire internet by default. Configure the allowed source IP addresses in `terraform.tfvars`:
 
 ```hcl
-rdp_source_address_prefixes = ["12.34.56.78/32, 78.56.34.12/32"]
+rdp_source_address_prefixes     = ["12.34.56.78/32", "78.56.34.12/32"]
 ```
 
 For a single public IP address:
