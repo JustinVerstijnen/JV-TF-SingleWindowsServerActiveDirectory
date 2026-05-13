@@ -62,7 +62,7 @@ scripts/bootstrap-dc.ps1
 6. Paste it in `terraform.tfvars`:
 
 ```hcl
-bootstrap_script_url = "[https://raw.githubusercontent.com/<owner>/<repo>/main/scripts/bootstrap-dc.ps1](https://raw.githubusercontent.com/JustinVerstijnen/JV-TF-SingleWindowsServerActiveDirectory/refs/heads/main/scripts/bootstrap-dc.ps1)"
+bootstrap_script_url = "[[https://raw.githubusercontent.com/<owner>/<repo>/main/scripts/bootstrap-dc.ps1](https://raw.githubusercontent.com/JustinVerstijnen/JV-TF-SingleWindowsServerActiveDirectory/refs/heads/main/scripts/bootstrap-dc.ps1)](https://raw.githubusercontent.com/JustinVerstijnen/JV-TF-SingleWindowsServerActiveDirectory/refs/heads/main/scripts/bootstrap-dc.ps1)"
 ```
 
 Keep this value aligned with the actual file name:
