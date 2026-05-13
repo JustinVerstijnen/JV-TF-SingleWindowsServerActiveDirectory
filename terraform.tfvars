@@ -10,7 +10,7 @@ vnet_address_space       = ["10.69.0.0/16"]
 subnet_address_prefixes  = ["10.69.0.0/24"]
 vnet_dns_servers         = ["10.69.0.4", "168.63.129.16"]
 internal_ip              = "10.69.0.4"
-rdp_source_address_prefixes = ["12.34.56.78/32, 78.56.34.12/32"]
+rdp_source_address_prefixes = ["12.34.56.78/32, 78.56.34.12/32"] # Change these mock-up IP addresses to your own trusted IP addresses
 
 # 3. Active Directory and Identity
 ad_forest_name      = "internal.justinverstijnen.nl" # The Active Directory forest to create on the Virtual Machine
