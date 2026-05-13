@@ -16,7 +16,7 @@ jv-azure-dc-terraform/
 ├── locals.tf
 ├── main.tf
 ├── outputs.tf
-├── terraform.tfvars.example
+├── terraform.tfvars
 ├── variables.tf
 └── versions.tf
 ```
@@ -62,7 +62,7 @@ scripts/bootstrap-dc.ps1
 6. Paste it in `terraform.tfvars`:
 
 ```hcl
-bootstrap_script_url = "https://raw.githubusercontent.com/<owner>/<repo>/main/scripts/bootstrap-dc.ps1"
+bootstrap_script_url = "[https://raw.githubusercontent.com/<owner>/<repo>/main/scripts/bootstrap-dc.ps1](https://raw.githubusercontent.com/JustinVerstijnen/JV-TF-SingleWindowsServerActiveDirectory/refs/heads/main/scripts/bootstrap-dc.ps1)"
 ```
 
 Keep this value aligned with the actual file name:
@@ -181,16 +181,8 @@ Then select the Terraform task you want to run.
 After deployment, check this folder on the VM:
 
 ```text
-C:\JV-Install\
+C:\JV-TF-Install\
 ```
-
-The bootstrap script creates a scheduled task named:
-
-```text
-JV-Promote-DC
-```
-
-The scheduled task performs the AD DS installation and domain controller promotion. Terraform may finish before the scheduled task and reboot are fully completed, so give the VM some time before testing RDP or Active Directory.
 
 ## Destroy the lab environment
 
