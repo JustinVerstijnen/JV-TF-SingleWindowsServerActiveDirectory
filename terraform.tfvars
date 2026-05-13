@@ -13,11 +13,11 @@ internal_ip              = "10.69.0.4"
 rdp_source_address_prefixes = ["12.34.56.78/32, 78.56.34.12/32"]
 
 # 3. Active Directory and Identity
-ad_forest_name      = "internal.justinverstijnen.nl"
-domain_netbios_name = "JV-INT"
-admin_username     = "justin-admin"
-admin_password     = "Y0uR-pA$$w0rD!"
-safe_mode_password = "Y0uR-dSrM-pA$$w0rD!"
+ad_forest_name      = "internal.justinverstijnen.nl" # The Active Directory forest to create on the Virtual Machine
+domain_netbios_name = "JV-INT" # The Active Directory NETBIOS name to create on the Virtual Machine
+admin_username     = "justin-admin" # The local administrator to create on the Virtual Machine
+admin_password     = "Y0uR-pA$$w0rD!" # The local administrator password to create on the Virtual Machine
+safe_mode_password = "Y0uR-dSrM-pA$$w0rD!" # The DSRM password to create on the Virtual Machine
 
 # 4. Virtual Machine settings
 vm_size         = "Standard_E4as_v7"
