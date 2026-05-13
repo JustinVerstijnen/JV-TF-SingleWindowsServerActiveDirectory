@@ -16,8 +16,8 @@ rdp_source_address_prefixes = ["12.34.56.78/32, 78.56.34.12/32"]
 ad_forest_name      = "internal.justinverstijnen.nl"
 domain_netbios_name = "JV-INT"
 admin_username     = "justin-admin"
-admin_password     = "ChangeM3-This-Password-Now!"
-safe_mode_password = "ChangeM3-This-DSRM-Password-Now!"
+admin_password     = "Y0uR-pA$$w0rD!"
+safe_mode_password = "Y0uR-dSrM-pA$$w0rD!"
 
 # 4. Virtual Machine settings
 vm_size         = "Standard_E4as_v7"
