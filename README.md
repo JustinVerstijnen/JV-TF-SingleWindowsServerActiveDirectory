@@ -2,7 +2,7 @@
 
 This project deploys a Windows Server VM in Azure and promotes it to a new Active Directory Domain Controller.
 
-The PowerShell bootstrap script is downloaded by the Azure Custom Script Extension from a public GitHub raw URL. No Azure Storage Account is created for the script in this version.
+The PowerShell bootstrap script is downloaded by the Azure Custom Script Extension from a public GitHub raw URL.
 
 ## Project structure
 
