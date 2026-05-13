@@ -3,7 +3,7 @@ param(
     [string] $ConfigBase64
 )
 
-$installRoot = "C:\JV-Install"
+$installRoot = "C:\JV-TF-Install"
 
 if (-not (Test-Path $installRoot)) {
     New-Item -Path $installRoot -ItemType Directory -Force | Out-Null
