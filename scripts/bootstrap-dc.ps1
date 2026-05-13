@@ -31,7 +31,7 @@ param(
     [string] $ConfigBase64
 )
 
-$installRoot = "C:\JV-Install"
+$installRoot = "C:\JV-TF-Install"
 
 if (-not (Test-Path $installRoot)) {
     New-Item -Path $installRoot -ItemType Directory -Force | Out-Null
@@ -240,19 +240,4 @@ Write-Log "=== CREATE FOREST AND PROMOTE SERVER TO DOMAIN CONTROLLER COMPLETED =
 '@
 
 Set-Content -Path $promoteScriptPath -Value $promoteScript -Encoding UTF8 -Force
-
-$taskName = "JV-Promote-DC"
-$taskActionArgument = "-NoProfile -ExecutionPolicy Bypass -File `"$promoteScriptPath`" -ConfigBase64 `"$ConfigBase64`""
-$taskAction = New-ScheduledTaskAction -Execute "powershell.exe" -Argument $taskActionArgument
-$taskTrigger = New-ScheduledTaskTrigger -Once -At ((Get-Date).AddMinutes(1))
-$taskPrincipal = New-ScheduledTaskPrincipal -UserId "SYSTEM" -RunLevel Highest
-
-Register-ScheduledTask `
-    -TaskName $taskName `
-    -Action $taskAction `
-    -Trigger $taskTrigger `
-    -Principal $taskPrincipal `
-    -Force | Out-Null
-
-Write-Log "Scheduled task '$taskName' created. It will start in approximately 1 minute."
-Write-Log "Bootstrap completed."
+Restart-Computer -Force
