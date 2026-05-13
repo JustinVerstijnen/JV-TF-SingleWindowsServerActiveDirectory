@@ -1,7 +1,7 @@
 # Change this file parameters to your own parameters
 
 # 1. Subscription, Location and Project name
-subscription_id    = "00000000-0000-0000-0000-000000000000"
+subscription_id    = "fd09e454-a13e-4e8c-a00e-a54b1385e2bd"
 project            = "testdc" # Keep this short: 2 to at max 9 characters to avoid VM name and resource name mismatch.
 location           = "westeurope"
 
@@ -10,7 +10,7 @@ vnet_address_space              = ["10.69.0.0/16"]
 subnet_address_prefixes         = ["10.69.0.0/24"]
 vnet_dns_servers                = ["10.69.0.4", "168.63.129.16"]
 internal_ip                     = "10.69.0.4"
-rdp_source_address_prefixes     = ["12.34.56.78/32, 78.56.34.12/32"] # Change these mock-up IP addresses to your own trusted IP addresses
+rdp_source_address_prefixes     = ["12.34.56.78/32", "78.56.34.12/32"] # Change these mock-up IP addresses to your own trusted IP addresses
 
 # 3. Active Directory and Identity
 ad_forest_name          = "internal.justinverstijnen.nl" # The Active Directory forest to create on the Virtual Machine
