@@ -8,8 +8,6 @@ The PowerShell bootstrap script is downloaded by the Azure Custom Script Extensi
 
 ```text
 jv-azure-dc-terraform/
-├── .vscode/
-│   └── tasks.json
 ├── scripts/
 │   └── bootstrap-dc.ps1
 ├── .gitignore
