@@ -7,7 +7,7 @@ locals {
 
   resource_group_name = "rg-jv-${local.project_clean}"
   vm_name             = "vm-jv-${local.project_clean}"
-  computer_name       = local.vm_name
+  computer_name       = replace(local.vm_name, "-", "")
   os_disk_name        = "osdisk-jv-${local.project_clean}"
   vnet_name           = "vnet-jv-${local.project_clean}"
   subnet_name         = "snet-jv-${local.project_clean}"
