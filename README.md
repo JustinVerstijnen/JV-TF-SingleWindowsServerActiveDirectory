@@ -1,4 +1,4 @@
-# JV Azure Domain Controller Terraform Deployment
+# JV Terraform Single Windows Server with Active Directory deployment
 
 This project deploys a Windows Server VM in Azure and promotes it to a new Active Directory Domain Controller.
 
