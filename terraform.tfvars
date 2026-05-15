@@ -2,7 +2,7 @@
 
 # 1. Subscription, Location and Project name
 subscription_id    = "fd09e454-a13e-4e8c-a00e-a54b1385e2bd"
-project            = "testdc" # Keep this short: 2 to at max 9 characters to avoid VM name and resource name mismatch.
+project            = "testdc" # Keep this short. The Azure VM resource name and Windows computer name become vm-jv-<project> and must stay at max 15 characters.
 location           = "westeurope"
 
 # 2. Networking

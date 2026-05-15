@@ -8,12 +8,12 @@ variable "subscription_id" {
 }
 
 variable "project" {
-  description = "Project name. Used for naming: rg-jv-project, vm-jv-project, and so on."
+  description = "Project name. Used for naming. The Azure VM resource name and Windows computer name are kept identical, including hyphens."
   type        = string
 
   validation {
-    condition     = can(regex("^[a-zA-Z0-9-]{2,20}$", var.project))
-    error_message = "Use only letters, numbers and hyphens. Length: 2 to 20 characters."
+    condition     = can(regex("^[a-zA-Z0-9][a-zA-Z0-9-]{1,8}$", var.project)) && !can(regex("-$", var.project))
+    error_message = "Use only letters, numbers and hyphens. Length: 2 to 9 characters. Do not end with a hyphen. The generated VM and Windows computer name, vm-jv-<project>, must be 15 characters or less."
   }
 }
 

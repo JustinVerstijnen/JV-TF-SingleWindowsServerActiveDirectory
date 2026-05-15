@@ -8,6 +8,8 @@ The PowerShell bootstrap script is downloaded by the Azure Custom Script Extensi
 
 ```text
 jv-azure-dc-terraform/
+├── .vscode/
+│   └── tasks.json
 ├── scripts/
 │   └── bootstrap-dc.ps1
 ├── .gitignore
@@ -21,11 +23,12 @@ jv-azure-dc-terraform/
 
 ## What it creates
 
-Based on the `project` variable, Terraform creates resources with this naming convention:
+Based on the `project` variable, Terraform creates resources with this naming convention. The Azure VM resource name and Windows computer name are kept identical, including hyphens:
 
 ```text
 Resource group: rg-jv-<project>
 VM:             vm-jv-<project>
+Computer name:  vm-jv-<project>
 OS disk:        osdisk-jv-<project>
 VNET:           vnet-jv-<project>
 NIC:            nic-jv-<project>
